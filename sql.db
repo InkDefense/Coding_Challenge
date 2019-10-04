@@ -1,0 +1,23 @@
+CREATE TABLE Headers (
+	header_id INT AUTO_INCREMENT PRIMARY KEY,
+	header_text VARCHAR(255)
+);
+
+CREATE TABLE Paragraphs (
+	paragraph_id INT AUTO_INCREMENT PRIMARY KEY,
+	paragraph_text TEXT
+);
+
+CREATE TABLE Images (
+	image_id INT AUTO_INCREMENT PRIMARY KEY,
+	image_file VARCHAR(255), /* file path for image */
+	image_alt_text VARCHAR(255)
+);
+
+CREATE TABLE Comments (
+	user_id INT AUTO_INCREMENT PRIMARY KEY,
+	profile_image VARCHAR(255),	/* url for image */
+	comment TEXT,
+	time_posted TIMESTAMP DEFAULT CURRENT TIMESTAMP,	/* sort oldest or newest */
+	likes INT	/* sort by top post or controversial */
+);
