@@ -1,3 +1,4 @@
+/*@author: Taylor Ratliff*/
 /* Each section follows this specific pattern */
 CREATE TABLE Sections (
 	section_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -6,6 +7,13 @@ CREATE TABLE Sections (
 	image_file VARCHAR(255), /* file path for image */
 	image_alt_text VARCHAR(255)
 	source_id INT Auto INCREMENT PRIMARY KEY,
+);
+
+CREATE TABLE HeaderSection (
+	header_id INT AUTO_INCREMENT PRIMARY KEY, /*More than likely articles following this format will only have 1 header section */
+	header_title VARCHAR(255),
+	header_paragraph TEXT,
+	author VARCHAR(255)
 );
 
 CREATE TABLE Comments (
